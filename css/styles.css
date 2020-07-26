@@ -21,6 +21,7 @@
 body {
     background: var(--white);
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 .background-figure-up {
     width: 50%;
@@ -185,14 +186,14 @@ body {
 h1 {
     text-align: center;
     font-size: 35px;
-    margin: 10%;
+    margin: 5% 10%;
     color: var(--secondary-dark);
 }
 .info p {
     text-align: center;
     line-height: 30px;
     color: gray;
-    margin: 8% 10%;
+    margin: 5% 10%;
 }
 .attribution {
     width: 80%;
