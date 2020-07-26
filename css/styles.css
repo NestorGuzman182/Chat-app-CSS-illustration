@@ -19,7 +19,7 @@
     margin: 0;
 }
 body {
-    background: var(--background-light);
+    background: var(--white);
     font-family: sans-serif;
 }
 .background-figure-up {
