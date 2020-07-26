@@ -1,0 +1,226 @@
+:root {
+    /*gradients*/
+    --primary-light: hsl(293, 100%, 63%);
+    --primary-dark: hsl(264, 100%, 61%);
+    /*secondary*/
+    --white: hsl(0, 0%, 100%);
+    --background-light:  hsl(270, 20%, 96%);
+    --bg-light: rgb(247, 238, 255);
+    --bg-dark: rgb(228, 213, 241);
+    --secondary-dark: hsl(271, 36%, 24%); /*submit button background*/
+    --secondary-light: hsl(289, 100%, 72%); /*radio button outline*/
+
+    /*fonts*/
+    --family: [Rubik](https://fonts.google.com/specimen/Rubik);
+}
+* {
+    font-family: var(--family);
+    font-size: 16px;
+    margin: 0;
+}
+body {
+    background: var(--background-light);
+    font-family: sans-serif;
+}
+.background-figure-up {
+    width: 50%;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    margin-top: -10%;
+    border-radius: 0 0 100% ;
+    position: absolute;
+    z-index: -1;
+    background: var(--primary-dark);
+}
+.background-figure-down {
+    width: 50%;
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: -50%;
+    border-radius: 100% 0 0;
+    background: var(--bg-light);
+}
+.container {
+    height: 100%;
+}
+.mobile {
+    width: 260px;
+    margin: 10% auto;
+    border: solid 10px var(--white);
+    border-radius: 30px;
+    box-shadow: 6px 6px 25px gainsboro;
+}
+.container-mobile-auricular {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+}
+.mobile-auricular {
+    width: 130px;
+    height: 15px;
+    position: absolute;
+    margin: 0 auto;
+    left: 70px;
+    top: -5px;
+    border-radius: 20px;
+    background-color: var(--white);
+}
+.mobile__header {
+    max-width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--white);
+    border-radius: 20px 20px 0 0;
+}
+.mobile__header i {
+    margin-top: 10px;
+    color: var(--white);
+    font-size: 13px;
+}
+.mobile__header--image {
+    width: 35px;
+    height: 35px;
+}
+.mobile__header--image img {
+    width: 100%; 
+    margin-top: 5px;
+    border-radius: 100%;
+}
+.info-user {
+    width: 70%;
+    margin-top: 10px;
+}
+.info-user h3 {
+    margin-left: 10px;
+    font-size: 13px;    
+}
+.info-user p {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 10px;
+    opacity: 0.5;
+    
+}
+.chat {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-light);
+    border-radius: 0 0 20px 20px;
+}
+.chat__person--first {
+    width: 60%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+    background: var(--bg-dark);
+    color: var(--primary-dark);
+    border-radius: 10px 10px 10px 0;
+}
+.chat__person--second {
+    width: 60%;
+    right: auto;
+    background: var(--white);
+    margin: 5px;
+    margin-left: auto;
+    padding: 5px;
+    font-size: 12px;
+    text-align: end;
+    border-radius: 10px 10px 0 10px;
+}
+
+.chat__pics--container {
+    display: flex;
+    width: 100%;
+}
+.chat__pics--container img {
+    width: 90%;
+    border-radius: 10px;
+}
+.price {
+    background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    width: 70%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+.price p {
+    font-size: 12px;
+}
+.price h5 {
+    margin-left: auto;
+    font-size: 16px;
+}
+.send__message {
+    max-width: 90%;
+    margin: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    border-radius: 50px;
+    text-align: center;
+}
+.send__message .input-text, input {
+    width: 90%;  
+    border: none;
+    font-size: 12px;
+    outline: none;
+}
+.send__message a, i {
+    width: 20px;
+    font-size: 30px;
+    color: var(--secondary-dark);
+    cursor: pointer;
+}
+.info {
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin: 10%;
+    color: var(--secondary-dark);
+}
+.info p {
+    text-align: center;
+    line-height: 30px;
+    color: gray;
+    margin: 8% 10%;
+}
+.attribution {
+    width: 80%;
+    margin: auto;
+}
+
+@media (min-width:1024px) {
+    .background-figure-up {
+        width: 40%;
+        left: -200px;
+        border-radius: 0 0 400px 400px;
+        background: linear-gradient(var(--primary-light), var(--primary-dark));
+    }
+    .background-figure-down {
+        width: 40%;
+        bottom: 0;
+        right: -200px;
+        border-radius: 400px 400px 0 0;
+    }
+    .container {
+        display: flex;
+        margin: 0 20%;
+    }
+    .info {
+        width: 50%;
+    }
+    .info p, h1 {
+        width: 100%;
+        text-align: left;
+    }
+}
