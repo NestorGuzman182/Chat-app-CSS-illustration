@@ -19,6 +19,7 @@
     margin: 0;
 }
 body {
+    box-sizing: border-box;
     background: var(--white);
     font-family: sans-serif;
     overflow-x: hidden;
@@ -122,6 +123,20 @@ body {
     background: var(--bg-dark);
     color: var(--primary-dark);
     border-radius: 10px 10px 10px 0;
+    animation: fade 1s;
+}
+.chat__person--first.msj1{
+    animation: fade 1s;
+}
+.chat__person--first.msj2{
+    animation: fade .8s;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+}
+.chat__person--first.msj3{
+    animation: fade .8s;
+    animation-fill-mode: backwards;
+    animation-delay: 6s;
 }
 .chat__person--second {
     width: 60%;
@@ -133,6 +148,9 @@ body {
     font-size: 12px;
     text-align: end;
     border-radius: 10px 10px 0 10px;
+    animation: fade 1s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
 }
 
 .chat__pics--container {
@@ -142,6 +160,21 @@ body {
 .chat__pics--container img {
     width: 90%;
     border-radius: 10px;
+}
+.chat__person--second.msj1{
+    animation: fade 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 4s;
+}
+.chat__person--second.msj2{
+    animation: fade 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 5s;
+}
+.chat__person--first.price{
+    animation: fade 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 7s;
 }
 .price {
     background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
@@ -223,5 +256,13 @@ h1 {
     .info p, h1 {
         width: 100%;
         text-align: left;
+    }
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 0.8;
     }
 }
